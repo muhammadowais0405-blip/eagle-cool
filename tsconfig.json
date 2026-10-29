@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./src/main" },
+    { "path": "./src/renderer" }
+  ],
+  "exclude": ["src/renderer/**/*"]
+}

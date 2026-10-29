@@ -1,0 +1,227 @@
+{
+  
+  "name": "eagle-media-manager",
+  "version": "6.0.0",
+
+"description": "Local media library manager — Eagle Media Manager",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+    "build:win": "vite build && electron-builder --win",
+    "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.eaglemediamanager.app",
+    "productName": "Eagle Media Manager",
+    "asarUnpack": [
+      "node_modules/@ffmpeg-installer/**",
+      "node_modules/@ffprobe-installer/**"
+    ],
+
+  
+    
+  "directories": {
+  
+    
+    
+  "output": "release"
+  
+    
+  },
+  
+    
+  "win": {
+  
+    
+    
+  "icon": "src/renderer/src/assets/icons/icon.ico",
+  
+    
+    
+  "target": [
+  
+    
+    
+    
+  {
+  
+    
+    
+    
+    
+  "target": "nsis",
+  
+    
+    
+    
+    
+  "arch": [
+  
+    
+    
+    
+    
+    
+  "x64"
+  
+    
+    
+    
+    
+  ]
+  
+    
+    
+    
+  }
+  
+    
+    
+  ]
+  
+    
+  },
+  
+    
+  "nsis": {
+  
+    
+    
+  "oneClick": false,
+  
+    
+    
+  "allowToChangeInstallationDirectory": true,
+  
+    
+    
+  "deleteAppDataOnUninstall": false
+  
+    
+  },
+  
+    
+  "files": [
+  
+    
+    
+  "dist/**/*",
+  
+    
+    
+  "src/renderer/src/assets/icons/**/*",
+  
+    
+    
+  "package.json"
+  
+    
+  ]
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "@electron/rebuild": "^4.0.3",
+  
+    
+  "@types/fluent-ffmpeg": "^2.1.28",
+  
+    
+  "@vitejs/plugin-vue": "^5.0.0",
+  
+    
+  "concurrently": "^8.2.0",
+  
+    
+  "electron": "^30.0.0",
+  
+    
+  "electron-builder": "^26.8.1",
+  
+    
+  "electron-rebuild": "^3.2.9",
+  
+    
+  "node-gyp": "^12.2.0",
+  
+    
+  "typescript": "^5.4.0",
+  
+    
+  "vite": "^5.2.0",
+  
+    
+  "vite-plugin-electron": "^0.28.0",
+  
+    
+  "wait-on": "^7.2.0"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "@ffmpeg-installer/ffmpeg": "^1.1.0",
+  
+    
+  "@ffprobe-installer/ffprobe": "^2.1.2",
+  
+    
+  "@vueuse/core": "^14.2.1",
+  
+    
+  "@vueuse/motion": "^3.0.3",
+  
+    
+  "better-sqlite3": "^11.0.0",
+  
+    
+  "chokidar": "^5.0.0",
+  
+    
+  "dayjs": "^1.11.20",
+  
+    
+  "electron-log": "^5.4.3",
+  
+    
+  "fluent-ffmpeg": "^2.1.3",
+  
+    
+  "imghash": "^1.1.2",
+  
+    
+  "minisearch": "^7.2.0",
+  
+    
+  "motion": "^12.38.0",
+  
+    
+  "node-addon-api": "^8.6.0",
+  
+    
+  "pinia": "^3.0.4",
+  
+    
+  "pinia-plugin-persistedstate": "^4.7.1",
+  
+    
+  "plyr": "^3.8.4",
+  
+    
+  "sharp": "^0.34.5",
+  
+    
+  "vue": "^3.4.0",
+  
+    
+  "vue-sonner": "^2.0.9",
+  
+    
+  "vuedraggable": "^4.1.0"
+  
+  }
+}
